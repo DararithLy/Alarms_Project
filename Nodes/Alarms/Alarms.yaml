@@ -1,0 +1,157 @@
+Name: Alarms
+Id: g=3293e7cd8de0bb06cc725e017a984470
+Type: AlarmsCategoryFolder
+Children:
+- Name: DigitalAlarm1
+  Id: g=d9a7dfabf7bf198eed2f2292e139e753
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=87633efae0757f38364718c28e6f5fbf
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+  - Name: InputValue
+    Id: g=58ffa1e9b6b95e68885320c5132cd75e
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=bd1d435a10b0f123035f75207e8857e8
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/DigitalTag"
+      Children:
+      - Name: Mode
+        Id: g=c6b0aea5dca9ffa496d5d110730063b0
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=a61eb86b2428a525b1b48333f067d04f
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=8;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=8;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=8;i=83
+    Direction: Forward
+  - Name: Message
+    Id: g=498b0f27cc2b70f0a5b452e1e3a53374
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"DigitalTag in alarm"}
+  - Name: Severity
+    Id: g=aa6a5a0ca32a631229f31ae105e90507
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1
+  - Name: AutoAcknowledge
+    Id: g=9fc57803d3a08d1ceef99896904eae56
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=f45b9fb02c8bc24716adde733350eda4
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+- Name: ExclusiveLevelAlarm1
+  Id: g=6389f7bd87c8944d3e10dd8833a03001
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Id: g=55fd6e5b10c2764993520a02f290d15b
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Id: g=09138febd31bd680f6e8f5ab6782874d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/AnalogTag"
+      Children:
+      - Name: Mode
+        Id: g=80d1b21377a7067240f08de8283259e6
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=25eb741c1e5ca4aa10300a42e2f43d11
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=8;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=8;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=8;i=83
+    Direction: Forward
+  - Name: LowLowLimit
+    Id: g=a31662fab796b06ec34d3a8a34429f4c
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 5.0
+  - Name: LowLimit
+    Id: g=6a320e3f90605bb80f25874ffca5cbe1
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 15.0
+  - Name: HighLimit
+    Id: g=b96659e71d68a4fdd5387d5787075131
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 75.0
+  - Name: HighHighLimit
+    Id: g=02bc0ee9231341bb7d5dd95a85fee8bc
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 95.0
+  - Name: Message
+    Id: g=51e435843d0fe10490d667f3bd30f00a
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    Children:
+    - Name: HighHighStateMessage
+      Id: g=add06688ac5d7b16af52bd3d89056b15
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"High High alarm"}
+    - Name: HighStateMessage
+      Id: g=e97fd807c1c7a808d3d92ef19c5a7ece
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"HS"}
+    - Name: LowStateMessage
+      Id: g=79c2d8f347c31b21c648480be3dc9f4d
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"LW"}
+    - Name: LowLowStateMessage
+      Id: g=2afd4bb7d79ae08de09310b836f89498
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Low Low alarm"}
+  - Name: AutoAcknowledge
+    Id: g=1e71b4f77db2efd1f1f385df080a259e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=cbb093c651f7dad204d1b7eb3b609b1e
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true

@@ -1,0 +1,11 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: DigitalTag
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+- Name: AnalogTag
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 0
